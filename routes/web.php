@@ -22,4 +22,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-Route::get('/user-info', 'HomeController@userInfo');
+Route::middleware(['auth:sanctum', 'verified'])->get('/user-info', 'HomeController@userInfo');

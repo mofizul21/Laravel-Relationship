@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    // data inserted- http://prntscr.com/ymdwfp
     public function userInfo(){
         $user   = User::find(Auth::user()->id);
-        $nid    = Nid::where('user_id', Auth::user()->id)->first();
-        return view('welcome', compact('nid', 'user'));
+        return view('welcome', compact('user'));
     }
 }

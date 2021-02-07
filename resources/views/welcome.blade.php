@@ -418,11 +418,10 @@
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <h2>User Info with hasMany</h2>
             <p>{{$user}}</p>
-            <p>{{$user->nid}}</p>
-
-            <h2>User Info with belongsTo</h2>
-            <p>{{$nid}}</p>
-            <p>{{$nid->user}}</p>
+            <p>{{$user->nids}}</p>
+            @foreach ($user->nids as $nid)
+                <p>{{$nid->nid_number}}</p>
+            @endforeach
         </div>
 
         {{-- <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">

@@ -58,7 +58,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function nid(){
-        return $this->hasOne(Nid::class);
+    public function nids(){
+        return $this->hasMany(Nid::class); // hasMany means this user has many nid
     }
 }
