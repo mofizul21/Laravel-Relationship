@@ -416,12 +416,15 @@
         @endif
 
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <h2>User Info with hasOne</h2>
-            <p>{{$user}}</p>
-            <p>{{$user->nids}}</p>
-            @foreach ($user->nids as $nid)
+            <h2>User Info with hasMany</h2>
+            <p>{{$nids}}</p>
+            <h4>With foreach()</h4>
+            @foreach ($nids as $nid)
                 <p>{{$nid->nid_number}}</p>
+                <p>{{$nid->user}}</p>
+                <p>{{$nid->user->name}}</p>
             @endforeach
+            
         </div>
 
         {{-- <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">

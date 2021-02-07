@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     // data inserted- http://prntscr.com/ymdwfp
     public function userInfo(){
-        $user   = User::find(Auth::user()->id);
-        return view('welcome', compact('user'));
+        $nids = Nid::where('user_id', Auth::user()->id)->get();
+        return view('welcome', compact('nids'));
     }
 }
