@@ -23,3 +23,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/user-info', 'HomeController@userInfo');
+
+Route::resource('product', 'ProductController');
